@@ -1,0 +1,58 @@
+/* Demetra Drizis 
+   Project 2
+   10/09/19
+*/
+
+Analyzing worst case run-time complexities for member functions deduplicate(), and reverse().
+
+reverse()
+-	The if(!empty()) statement has a time complexity of O(1)
+-	auto itr = head has a complexity of O(1)
+-	The while loop has a complexity of all the statements in the loop
+-	The while loop itself has a complexity of O(N)
+-	Complexity of std::swap(itr->next, itr-> prev) = O(1)
+-	itr = itr->prev has a complexity of O(1)
+-	The complexity of std::swap(head, tail) is O(1)
+-	So, O(N) + O(1) + O(1) + O(1) + O(1) + O(1)  = O(N)
+
+-	So, overall the time complexity of the reverse() function is O(N) + O(1) which equals O(N)
+
+-	ANSWER: Time complexity of the reverse() function is O(N)
+
+-	inpute size = 100
+	   - average execution time = 7 usec
+
+- 	input size = 1000
+	   - average execution time = 77.333 usec
+	   - as the size increased so did the time complexity by about 10 times
+	
+-	input size = 10000
+           - average execution time = 616 usec 
+	   - as the size increased so did the time complexity by about 100 times of the input size 100
+             and 10 times of the input size 1000
+
+
+deduplicate()
+-	The for(auto itr = begin(); itr != end(); itr++) has a time complexity of O(N)
+-	T val = *itr has a complexity of O(1)
+-	The for (auto j = itr; j != end(); j++)has a complexity of O(N)
+-	if(val == *j && j!= itr) has a complexity of O(1)
+-	erase(j) has a complexity of O(1)
+-	So, O(N) * O(N) + O(1) + O(1) + O(1) = O(N^2)
+
+-	So, the overall time complexity of the deduplicate function is O(N) * O(N) = O(N^2)
+
+-	ANSWER: Time complexity of the deduplicate() function is O(N^2)
+
+- 	input size = 100
+	   - average execution time = 413126 usec
+	   - I think there is a problem when I run the time on linprog and think it should be closer to 100000 usec
+
+- 	input size = 1000
+	   - average execution time = 152663 usec
+	   - as the size increased so did the time complexity by about 50,000 usec
+
+-	input size = 10000
+	   - average execution time = 563325 usec
+	   - as the size increased so did the time complexity by about 400,000 usec from the input size 1000
+ 	     and 450,000 from the input size 100
