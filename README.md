@@ -3,7 +3,7 @@ This repository contains data structures implementation projects made in the COP
 
 # Projects: 
   Project 1 - Most Uniform Subsequence  
-  Project 2 - Doubly-Linked List container  
+  Project 2 - Doubly-Linked List Container  
   Project 3 - Stack Implementation  
   Project 4 - Binary Tree Implementation  
   Project 5 - Hash Table Implementation 
