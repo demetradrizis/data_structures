@@ -1,0 +1,22 @@
+Demetra Drizis
+Project 4
+11/12/19
+//////////////////////////////////////////////////////
+
+makeEmpty (BinaryNode* & t) Time Complexity Analysis 
+
+
+Time Complexity : Linear - 0(n)
+
+
+makeEmpty(BinaryNode* & t) iterates from the root down
+through all the leaves recursively. It first deletes the lowest 
+points from left to right. There is no loops and it simply
+just deletes the BinaryNodes dependent on the size of the tree. 
+So, the Big-O time complexity of the recursive deletion is linear,
+depending on the size of the three n. 
+
+Recursion is faster than a loop because a loop would require us
+to know the tree size. We would have to iterate through the whole
+tree to figure out the size, which would make the complexity double
+the size. This would require a loop and a iteration.  
